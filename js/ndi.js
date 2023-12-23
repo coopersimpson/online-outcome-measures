@@ -8,13 +8,13 @@ const { PDFDocument } = PDFLib
       // Load a PDF with form fields
       const pdfDoc = await PDFDocument.load(formPdfBytes)
 
-
       // Get the form containing all the fields
       const form = pdfDoc.getForm()
 
-      const checkField = form.getCheckBox('1.1')
-      checkField.check()
-
+      // Check the appropriate checkbox based on the selected radio button
+      const selectedRadioButtonId = document.querySelector('input[name="pain-intensity"]:checked').id;
+      const checkField = form.getCheckBox(selectedRadioButtonId);
+      checkField.check();
 
       // Serialize the PDFDocument to bytes (a Uint8Array)
       const pdfBytes = await pdfDoc.save()
