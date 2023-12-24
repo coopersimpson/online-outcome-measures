@@ -11,7 +11,7 @@ const { PDFDocument } = PDFLib
       // Get the form containing all the fields
       const form = pdfDoc.getForm()
 
-      // Check the appropriate checkbox based on the selected radio button
+      // Check the appropriate checkbox based on the selected radio buttons
       const selectedRadioButtonId = document.querySelector('input[name="pain-intensity"]:checked').id;
       const checkField = form.getCheckBox(selectedRadioButtonId);
       checkField.check();
