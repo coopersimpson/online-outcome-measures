@@ -28,3 +28,39 @@ async function fillForm() {
   // Trigger the browser to download the PDF document
   download(pdfBytes, "neck-disability-index.pdf", "application/pdf");
 }
+
+// function colorParentElement() {
+//   const radioButtons = document.querySelectorAll('input[type="radio"]');
+//   radioButtons.forEach(radioButton => {
+//     if (radioButton.checked) {
+//       radioButton.parentElement.style.backgroundColor = 'blue';
+//     }
+//     else {
+//       radioButton.parentElement.style.backgroundColor = 'white';
+//     }
+//   });
+// }
+
+
+function colorParentElement() {
+  const radioButtons = document.querySelectorAll('input[type="radio"]');
+  radioButtons.forEach(radioButton => {
+    radioButton.addEventListener('change', () => {
+      // Reset all radio buttons' parent background color
+      radioButtons.forEach(rb => {
+        if (rb.checked) {
+          rb.parentElement.style.backgroundColor = 'rgba(0, 123, 255, 0.5)'; // Set transparency to 0.5
+        } else {
+          rb.parentElement.style.backgroundColor = '';
+        }
+      });
+      // Color the clicked radio button's parent
+      if (radioButton.checked) {
+        radioButton.parentElement.style.backgroundColor = 'rgba(0, 123, 255, 0.5)'; // Set transparency to 0.5
+      }
+    });
+  });
+}
+
+// Call the function to add event listeners
+colorParentElement();
