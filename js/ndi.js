@@ -1,7 +1,6 @@
 const { PDFDocument } = PDFLib
 
 async function fillForm() {
-  console.log('test')
   // Fetch the PDF with form fields
   const formUrl = '../pdfs/neck-disability-index.pdf'
   const formPdfBytes = await fetch(formUrl).then(res => res.arrayBuffer())
