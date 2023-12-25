@@ -18,11 +18,10 @@ header {
 
 /* Footer */
 footer {
-    background: linear-gradient(to right, #ffffff, #949494, #ffffff);
     color: #000000;
     padding: 20px;
     text-align: center;
-    margin-top: auto;
+    margin-top: auto; /* Pin the footer to the bottom */
     border-top: #333;
     border-top-style: solid;
 }
@@ -53,14 +52,14 @@ button {
     background-color: #007bff;
     border: none;
     color: #ffffff;
-    padding: 5px 10px; /* Updated padding to make the button smaller */
+    padding: 8px 10px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
     transition-duration: 0.4s;
     cursor: pointer;
-    margin: 0 auto; /* Added margin to center the button */
+    margin: 20px auto;
 }
 
 .radio-buttons {
@@ -79,4 +78,32 @@ label {
 .radio-buttons {
     display: flex;
     flex-direction: row;
+}
+
+/* Dropdown */
+.dropdown-header {
+  cursor: pointer;
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: #f9f9f9;
+}
+
+.dropdown-content {
+    display: none;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+.dropdown-content p {
+    margin: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.dropdown-header:hover {
+    background-color: #007bff;
+    transition: color 0.3s ease-out;
 }
