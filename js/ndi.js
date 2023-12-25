@@ -22,6 +22,46 @@ async function fillForm() {
   const checkPersonalCare = form.getCheckBox(personalCareRadioButtonId);
   checkPersonalCare.check();
 
+  // Lifting
+  const liftingRadioButtonId = document.querySelector('input[name="lifting"]:checked').id;
+  const checkLifting = form.getCheckBox(liftingRadioButtonId);
+  checkLifting.check();
+
+  // Reading
+  const readingRadioButtonId = document.querySelector('input[name="reading"]:checked').id;
+  const checkReading = form.getCheckBox(readingRadioButtonId);
+  checkReading.check();
+
+  // Headaches
+  const headachesRadioButtonId = document.querySelector('input[name="headaches"]:checked').id;
+  const checkHeadaches = form.getCheckBox(headachesRadioButtonId);
+  checkHeadaches.check();
+
+  // Concentration
+  const concentrationRadioButtonId = document.querySelector('input[name="concentration"]:checked').id;
+  const checkConcentration = form.getCheckBox(concentrationRadioButtonId);
+  checkConcentration.check();
+
+  // Work
+  const workRadioButtonId = document.querySelector('input[name="work"]:checked').id;
+  const checkWork = form.getCheckBox(workRadioButtonId);
+  checkWork.check();
+
+  // Driving
+  const drivingRadioButtonId = document.querySelector('input[name="driving"]:checked').id;
+  const checkDriving = form.getCheckBox(drivingRadioButtonId);
+  checkDriving.check();
+
+  // Sleeping
+  const sleepingRadioButtonId = document.querySelector('input[name="sleeping"]:checked').id;
+  const checkSleeping = form.getCheckBox(sleepingRadioButtonId);
+  checkSleeping.check();
+
+  // Recreation
+  const recreationRadioButtonId = document.querySelector('input[name="recreation"]:checked').id;
+  const checkRecreation = form.getCheckBox(recreationRadioButtonId);
+  checkRecreation.check();
+
   // Serialize the PDFDocument to bytes (a Uint8Array)
   const pdfBytes = await pdfDoc.save()
 
@@ -29,19 +69,7 @@ async function fillForm() {
   download(pdfBytes, "neck-disability-index.pdf", "application/pdf");
 }
 
-// function colorParentElement() {
-//   const radioButtons = document.querySelectorAll('input[type="radio"]');
-//   radioButtons.forEach(radioButton => {
-//     if (radioButton.checked) {
-//       radioButton.parentElement.style.backgroundColor = 'blue';
-//     }
-//     else {
-//       radioButton.parentElement.style.backgroundColor = 'white';
-//     }
-//   });
-// }
-
-
+// Add event listeners to radio buttons to color their parent element
 function colorParentElement() {
   const radioButtons = document.querySelectorAll('input[type="radio"]');
   radioButtons.forEach(radioButton => {
