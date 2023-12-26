@@ -62,11 +62,6 @@ button {
     margin: 20px auto;
 }
 
-.radio-buttons {
-    display: flex;
-    flex-direction: row;
-}
-
 label {
     flex: 1;
     padding: 10px;
