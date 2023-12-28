@@ -1,4 +1,6 @@
-const { PDFDocument } = PDFLib
+import { PDFDocument } from 'pdf-lib'
+import download from 'downloadjs'
+
 
 async function fillForm() {
   // Fetch the PDF with form fields
@@ -73,6 +75,10 @@ async function fillForm() {
   // Trigger the browser to download the PDF document
   download(pdfBytes, "neck-disability-index.pdf", "application/pdf");
 }
+
+// Add event listener to PDF download buttons
+document.getElementById('downloadButton1').addEventListener('click', fillForm);
+document.getElementById('downloadButton2').addEventListener('click', fillForm);
 
 // Add event listeners to radio buttons to color their parent element
 function colorParentElement() {
